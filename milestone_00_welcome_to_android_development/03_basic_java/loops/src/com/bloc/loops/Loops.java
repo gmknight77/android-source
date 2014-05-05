@@ -29,7 +29,12 @@ public class Loops extends Object {
 		someBools[4] = someBools[3];
 		someBools[3] = temp;
 		// Ends here
+		
+		      while (somebools && temp == true)
+      		{
+      				
 
+      		}
 		/*
 		 * ASSIGNMENT:
 		 * Replace the operations above with a while loop
@@ -56,6 +61,7 @@ public class Loops extends Object {
 		numArray[6] = !someBools[6] ? 1 : 0;
 		numArray[7] = !someBools[7] ? 1 : 0;
 		// Ends here
+
 
 		/*
 		 * ASSIGNMENT:

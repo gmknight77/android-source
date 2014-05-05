@@ -9,12 +9,12 @@ public class WorstPractices extends Object {
 // EDIT BELOW
 
 	public static void main(String [] args) {
-		int MAGIC_NUMBER = WorstPractices.animals(false);
-		MAGIC_NUMBER *= 5;
-			if (MAGIC_NUMBER > 18) {
-									while(MAGIC_NUMBER > 0)
+		int magicNumber worstPractices.animals(false);
+		magicNumber*= 5;
+			if (magicNumber > 18) {
+									while(magicNumber > 0)
 								{
-				MAGIC_NUMBER--;
+				magicNumber--;
 									}
 			}
 	}
@@ -29,12 +29,12 @@ private static int animals(boolean yeswellheresthething)
 		/*
 			Start off with one of these
 		*/
-	int anint = yeswellheresthething ? 34 : 21;
-	float sparklesfairy = .5f;
+	int aInt = theThing ? 34 : 21;
+	float sparklesFairy = .5f;
 	for (int brown = 0; brown < aInt; brown++) 
-		{ sparklesfairy *= aInt;
+		{ sparklesFairy *= aInt;
 			} 
-	return (int) sparklesfairy * aInt;
+	return (int) sparklesFairy * aInt;
 }
 
 // STOP EDITING
