@@ -15,11 +15,12 @@ public class Logic extends Object {
 		 * ASSIGNMENT:
 		 * Change the following logical operation such that the statement evaluates to 'true' 
 		 */
-		if (false && true) { // Change something here
+		if (false != true) { // Change something here
 			buffer.append("r");
-		} else {
-			buffer.append("w");
-		}
+		} 
+			else {
+					buffer.append("w");
+				}
 
 		/*
 		 * ASSIGNMENT:
@@ -27,7 +28,7 @@ public class Logic extends Object {
 		 * the conditional as 'true'
 		 */
 		int x = 5; // Change here
-		int y = 10; // Or here
+		int y = 11; // Or here
 		int z = 30; // Or here
 		if (x == 6 || y == 11 || z == 83) { // Or even here, who knows
 			buffer.append("i");
@@ -40,7 +41,7 @@ public class Logic extends Object {
 		 * Add a single operator to the conditional statement in order to evaluate it as 'true'
 		 */
 		boolean aSincereFalsehood = false;
-		if (aSincereFalsehood) { // Add an operator to this line
+		if (aSincereFalsehood == false) { // Add an operator to this line
 			buffer.append("g");
 		} else {
 			buffer.append("o");
@@ -50,7 +51,7 @@ public class Logic extends Object {
 		 * ASSIGNMENT:
 		 * Change the comparison below in order for the statement to evaluate as 'true'
 		 */
-		if (200 > 200) {
+		if (200 >= 200) {
 			buffer.append("h");
 		} else {
 			buffer.append("n");
@@ -62,7 +63,7 @@ public class Logic extends Object {
 		 * as 'true'
 		 */
 		boolean lastOne = false;
-		if ((8 < 0) && !(15 == 15) && (lastOne == true)) { // Modify this line
+		if ((8 > 0) || (15 == 15) || (lastOne == true)) { // Modify this line
 			buffer.append("t");
 		} else {
 			buffer.append("g");
