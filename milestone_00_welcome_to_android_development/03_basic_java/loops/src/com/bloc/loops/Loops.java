@@ -69,10 +69,12 @@ public class Loops extends Object {
         int[] numArray = new int[someBools.length];
 		
 		/*
-		 if (!someBools[0]) {
-			  numArray[0] = 1; } 
+		 if (!someBools[0]) { // !someBools[0]
+			  numArray[0] = 1; 
+		 } 
 		   else {
-			  numArray[0] = 0; }
+			  numArray[0] = 0;
+		 }
 		*/
 		
 		/*
@@ -89,9 +91,10 @@ public class Loops extends Object {
 		//Ends here
 	
 		int x = 0; 
-		int y = 0;
-		for (x <= 7; x++) {
-			numArray[x] = !someBools[y] ? 1: 0; }
+		for (x<= 7; x++) {
+
+			numArray[x] = !someBools[x] ? 1 : 0;
+		}
 		/*
 		 * ASSIGNMENT:
 		 * Replace the operations above with a for loop
