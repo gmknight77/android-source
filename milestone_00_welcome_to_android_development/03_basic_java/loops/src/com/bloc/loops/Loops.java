@@ -90,19 +90,20 @@ public class Loops extends Object {
 		
 		//Ends here
 	
-		int x = 0; 
-		for (x<= 7; x++) {
-
-			numArray[x] = !someBools[x] ? 1 : 0;
-		}
+		 
+		for (int x = 0;x <= 7; x++) {
+			 numArray[x] = !someBools[x] ? 1 : 0;
+			}
 		/*
 		 * ASSIGNMENT:
 		 * Replace the operations above with a for loop
 		 */
 
 		if (Test.testInts(numArray)) {
-			System.out.print("And you nailed the number array!\n"); } 
-			else {
-			System.out.print("Issue with the numbers…\n"); }
+			System.out.print("And you nailed the number array!\n"); 
+			} 
+		 else {
+		  System.out.print("Issue with the numbers…\n"); 
+		 }
 	}
 }
