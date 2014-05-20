@@ -11,28 +11,33 @@ public class WorstPractices extends Object{
 	public static void main(String [] args) {
 		int magicNumber = worstPractices.animals(false);
 		magicNumber *= 5;
-		 if (magicNumber > 18) {
+		if (magicNumber > 18) {
+		 
 			while(magicNumber > 0) {
-				magicNumber--;}
-		 }
+		 		  magicNumber--; 
+		 	}
+		}
 	}
 
-/*  animals
-	this method takes in a single parameter, yeswellheresthething. 
+//  animals
+/*	this method takes in a single parameter, yeswellheresthething. 
 	Using a very elaborate and complex algorithm, it calculate a magic number
  	yeswellheresthething: a seed which helps generate the magic number
  	returns: a magical number
 */
-private static int animals(boolean theThing) {
+	private static int animals(Boolean theThing) {
 		/*
 			Start off with one of these
 		*/
-	int anInt = theThing ? 34 : 21;
-	float sparklesFairy = .5f;
-	for (int brown = 0; brown < anInt; brown++) { 
-		 sparklesFairy *= anInt; } 
-	return (int) sparklesFairy * aInt;
-}
+		int anInt = theThing ? 34 : 21;
+		float sparklesFairy = .5f;
+			
+			for (int brown = 0; brown < anInt; brown++) { 
+	 		sparklesFairy *= anInt; 
+	 		} 
+	
+		return (int) sparklesFairy * aInt;
+	}
 
 // STOP EDITING
 }
