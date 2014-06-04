@@ -17,14 +17,21 @@ public class Methods extends Object {
 		} else {
 			System.out.println("Looks like your \'" + method.getName() + "\' method has an issue with it.\n");
 		}
+
+
+		//boolean myBoolean = false;
+		//myBoolean = giveMeTheOpposite(myBoolean);
+		// {-5, 23, -53, -12, -63, -24}
 	}
 
 	public boolean giveMeTheOpposite(boolean original) {
+
 		/*
 		 * ASSIGNMENT:
 		 * Return the logical opposite of the passed parameter 'original'
 		 */
-		return false;
+			
+			return !original;	
 	}
 
 	public void flipTheSign(int[] numbers) {
@@ -33,7 +40,12 @@ public class Methods extends Object {
 		 * For all the integers in the array, reverse their sign:
 		 * e.g. {1, 54, -12} becomes {-1, -54, 12}
 		 */
-	}
+	
+		for (int x = 0; x < numbers.length; x++ ){
+				numbers[x] *= -1;				
+		 }
+	}	
+
 
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
 		/*
@@ -43,8 +55,18 @@ public class Methods extends Object {
 		 * array is at least 'floor' e.g.
 		 * {0, 5, 18, 2} with a floor of 6 returns {false, false, true, false}
 		 */
-		return new boolean [0];
-	}
+			boolean[] boolsArray = new boolean[someNumbers.length];
+			int i;
+				for (i = 0; i < someNumbers.length; i++) {
+					// boolsArray[i] = someNumbers[i] > floor;
+					if (floor < someNumbers[i]){
+						boolsArray[i] = true; 
+					} else{
+						boolsArray[i] = false;
+					}
+				}		
+			return boolsArray;
+	} 
 
 	public int[] getMinAndMax(int[] someNumbers) {
 		/*
@@ -54,6 +76,16 @@ public class Methods extends Object {
 		 * be the largest e.g.
 		 * {3, 6, 202, 2, 9986, 5} returns {2, 9986}
 		 */
-		return new int[2];
-	}
+			int maxValue = someNumbers[0];
+			int minValue = someNumbers[0];
+			for (int n = 1; n < someNumbers.length; n++){
+				if (someNumbers[n] > maxValue){
+					maxValue = someNumbers[n];
+				}
+				else if(someNumbers[n] < minValue){
+					minValue = someNumbers[n];
+				}
+			}
+        return new int[] {minValue, maxValue};     
+    } 
 }
