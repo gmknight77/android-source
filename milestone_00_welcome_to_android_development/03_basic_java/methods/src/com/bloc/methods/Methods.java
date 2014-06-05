@@ -86,6 +86,6 @@ public class Methods extends Object {
 					minValue = someNumbers[n];
 				}
 			}
-        return new int[] {minValue, maxValue};     
+         return new int[] {minValue, maxValue};     
     } 
 }
