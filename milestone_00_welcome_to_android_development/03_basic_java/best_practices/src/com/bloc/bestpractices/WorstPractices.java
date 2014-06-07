@@ -9,7 +9,7 @@ public class WorstPractices extends Object{
 // EDIT BELOW
 
 	public static void main(String [] args) {
-		int magicNumber = worstPractices.animals(false);
+		int magicNumber = WorstPractices.animals(false);
 		magicNumber *= 5;
 		if (magicNumber > 18) {
 		 
@@ -32,11 +32,11 @@ public class WorstPractices extends Object{
 		int anInt = theThing ? 34 : 21;
 		float sparklesFairy = .5f;
 			
-			for (int brown = 0; brown < anInt; brown++) { 
+		for (int i = 0; i < anInt; i++) { 
 	 		sparklesFairy *= anInt; 
-	 		} 
+	 	} 
 	
-		return (int) sparklesFairy * aInt;
+		return (int) sparklesFairy * anInt;
 	}
 
 // STOP EDITING
