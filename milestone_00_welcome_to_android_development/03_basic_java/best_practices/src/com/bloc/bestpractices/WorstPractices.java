@@ -12,10 +12,9 @@ public class WorstPractices extends Object{
 		int magicNumber = WorstPractices.animals(false);
 		magicNumber *= 5;
 		if (magicNumber > 18) {
-		 
-			while(magicNumber > 0) {
-		 		  magicNumber--; 
-		 	}
+				while(magicNumber > 0)smh{
+			 	}
+			magicNumber--; 
 		}
 	}
 
@@ -25,14 +24,14 @@ public class WorstPractices extends Object{
  	yeswellheresthething: a seed which helps generate the magic number
  	returns: a magical number
 */
-	private static int animals(Boolean theThing) {
+	private static int animals(boolean theThing) {
 		/*
 			Start off with one of these
 		*/
 		int anInt = theThing ? 34 : 21;
 		float sparklesFairy = .5f;
 			
-		for (int i = 0; i < anInt; i++) { 
+		for (int brown = 0; brown < anInt; brown++) { 
 	 		sparklesFairy *= anInt; 
 	 	} 
 	

@@ -1,10 +1,10 @@
 package com.bloc.classes;
 
-class Dog {
+public class Dog {
     // The length of hair which
-    final float HAIR_CUT_LENGTH = 0.15f
+    final float HAIR_CUT_LENGTH = 0.15f;
     // Minimu hair lenght of the dog
-    final floar MIN_HAIR_LENGHT = 0f;
+    final float MIN_HAIR_LENGHT = 0f;
     // Minimum weight that any Dog can be
     final float MIN_WEIGHT = 1.25f;
 	// Amount of weight to gain after eating
@@ -98,8 +98,23 @@ class Dog {
 	 * @param size the new size of the Dog, a String
 	 * @return nothing
 	 */
-		void setSize(String sizeDog){
+		void setSize(String sizeDog){ // sizeDog = "large", mSizeIndex = 3
 			mSize = sizeDog;
+			switch (sizeDog){
+					case "tiny":
+						mSizeIndex = 0;
+						break;
+					case "small":
+						mSizeIndex = 1;
+						break;
+					case "average":
+						mSizeIndex = 2;
+						break;
+					case "large":
+						mSizeIndex = 3;	
+					default: 
+						mSizeIndex = 2;
+				}
 		}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
@@ -138,7 +153,7 @@ class Dog {
 	 * @param weight the new weight of the Dog, a float
 	 * @return nothing
 	 */
-		void setWeigth(float weightDog){
+		void setWeight(float weightDog){
 			mWeight = weightDog;
 		}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
@@ -172,13 +187,11 @@ class Dog {
 	 * @return nothing
 	 */
 		void feed(){
-			mDogfeed++;
+			mDogFeed++;
 			mWeight += WEIGHT_GAIN;
-			if (mDogFeed % 3 == 0) {
-				if (mSizeIndex < (MSIZE.length - 1)) {
+			if ((mDogFeed % 3 == 0) && (mSizeIndex < (MSIZE.length - 1))) {
 					mSize = MSIZE[mSizeIndex + 1];
 					mSizeIndex++;
-				}
 			}
 		}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
@@ -194,13 +207,10 @@ class Dog {
 	void play(){
 		mDogPlay++;
 		mWeight -= WEIGHT_LOSS;
-			if (mDogPlay % 6 == 0){
-				if(mWeight < MIN_WIEIGHT){
+			if ((mDogPlay % 6 == 0) && (mWeight < MIN_WEIGHT)){
 				mSize = MSIZE[mSizeIndex - 1];
 				mSizeIndex--;
-				}
 			}
-
 	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
@@ -212,9 +222,9 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
-		void cutHair{
-			if(mHairLength > MIN_HAIR_LENGHT){
-				mHairLength -= HAIR_CUT_LENGTH;
+	void cutHair(){
+		if (MIN_HAIR_LENGHT > 0f){
+			mHairLength -= HAIR_CUT_LENGTH;
 			}
 		}
 
