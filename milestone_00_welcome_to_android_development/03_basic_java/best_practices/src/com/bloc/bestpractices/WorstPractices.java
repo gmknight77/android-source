@@ -37,6 +37,5 @@ public class WorstPractices extends Object{
 	
 		return (int) sparklesFairy * anInt;
 	}
-
 // STOP EDITING
 }
