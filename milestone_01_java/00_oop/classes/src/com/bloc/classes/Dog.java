@@ -221,7 +221,6 @@ public class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
 	void cutHair(){
 		if (MIN_HAIR_LENGHT > 0f){
 			mHairLength -= HAIR_CUT_LENGTH;
