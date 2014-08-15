@@ -1,6 +1,6 @@
 package com.bloc.classes;
 
-public class Dog {
+public class Dog{
     // The length of hair which
     final float HAIR_CUT_LENGTH = 0.15f;
     // Minimu hair lenght of the dog
@@ -31,6 +31,8 @@ public class Dog {
 	int mSizeIndex;
 	// Number of itmes the dog plays
 	int mDogPlay;
+
+
 
 
 	// ADD MEMBER VARIABLES HERE IF NECESSARY
@@ -78,18 +80,18 @@ public class Dog {
 	 * @param gender the new gender of the Dog, a String
 	 * @return nothing
 	 */
-		void setGender(String genderDog){
-			mGender = genderDog;
-		}
+	void setGender(String genderDog){
+		mGender = genderDog;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
 	 * getSize
 	 * @return the size of the dog
 	 */
-		String getSize() {
-			return mSize;
-		}
+	String getSize() {
+		return mSize;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
@@ -98,23 +100,24 @@ public class Dog {
 	 * @param size the new size of the Dog, a String
 	 * @return nothing
 	 */
-		void setSize(String sizeDog){ // sizeDog = "large", mSizeIndex = 3
-			mSize = sizeDog;
-			switch (sizeDog){
-					case "tiny":
-						mSizeIndex = 0;
-						break;
-					case "small":
-						mSizeIndex = 1;
-						break;
-					case "average":
-						mSizeIndex = 2;
-						break;
-					case "large":
-						mSizeIndex = 3;	
-					default: 
-						mSizeIndex = 2;
-				}
+	void setSize(String sizeDog){ // sizeDog = "large", mSizeIndex = 3
+		mSize = sizeDog;
+		switch (sizeDog){
+			case "tiny":
+				mSizeIndex = 0;
+				break;
+			case "small":
+				mSizeIndex = 1;
+				break;
+			case "average":
+				mSizeIndex = 2;
+				break;
+			case "large":
+				mSizeIndex = 3;	
+				break;
+			default: 
+				mSizeIndex = 2;
+		}
 		}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
@@ -122,9 +125,9 @@ public class Dog {
 	 * getAge
 	 * @return this Dog's age
 	 */
-		int getAge(){
-			return mAge;
-		}
+	int getAge(){
+		return mAge;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
@@ -133,27 +136,28 @@ public class Dog {
 	 * @param age the new age of the Dog, an int
 	 * @return nothing
 	 */
-		void setAge(int ageDog){
-			mAge = ageDog;
-		}
+	void setAge(int ageDog){
+		mAge = ageDog;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
 	 * getWeight
 	 * @return this Dog's weight
 	 */
-		float getWeight(){
-			return mWeight;
-		}
+	float getWeight(){
+		return mWeight;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
 	 * setWeight
 	 * Sets the weight of the Dog
+	 * Remember to call super implementation
 	 * @param weight the new weight of the Dog, a float
 	 * @return nothing
 	 */
-		void setWeight(float weightDog){
+	void setWeight(float weightDog){
 			mWeight = weightDog;
 		}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
@@ -162,9 +166,9 @@ public class Dog {
 	 * getColor
 	 * @return this Dog's color
 	 */
-		String getColor(){
-			return mColor;
-		}
+	String getColor(){
+		return mColor;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
@@ -173,9 +177,9 @@ public class Dog {
 	 * @param color the new color of the Dog's coat, a String
 	 * @return nothing
 	 */
-		void setColor(String colorDog){
-			mColor = colorDog;
-		}
+	void setColor(String colorDog){
+		mColor = colorDog;
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
@@ -186,14 +190,14 @@ public class Dog {
 	 *                   "average" (3 meals later ->) "large"
 	 * @return nothing
 	 */
-		void feed(){
-			mDogFeed++;
-			mWeight += WEIGHT_GAIN;
-			if ((mDogFeed % 3 == 0) && (mSizeIndex < (MSIZE.length - 1))) {
-					mSize = MSIZE[mSizeIndex + 1];
-					mSizeIndex++;
-			}
+	void feed(){
+		mDogFeed++;
+		mWeight += WEIGHT_GAIN;
+		if ((mDogFeed % 3 == 0) && (mSizeIndex < (MSIZE.length - 1))) {
+			mSize = MSIZE[mSizeIndex + 1];
+			mSizeIndex++;
 		}
+	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
 	/*
@@ -207,10 +211,14 @@ public class Dog {
 	void play(){
 		mDogPlay++;
 		mWeight -= WEIGHT_LOSS;
-			if ((mDogPlay % 6 == 0) && (mWeight < MIN_WEIGHT)){
-				mSize = MSIZE[mSizeIndex - 1];
-				mSizeIndex--;
-			}
+		// Dog MAY be below MIN_WEIGHT
+		if (mWeight < MIN_WEIGHT){
+			mWeight = MIN_WEIGHT;
+		}
+		if (mDogPlay % 6 == 0 && mSizeIndex != 0) {
+			mSize = MSIZE[mSizeIndex - 1];
+			mSizeIndex--;
+		}
 	}
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
@@ -222,9 +230,9 @@ public class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void cutHair(){
-		if (MIN_HAIR_LENGHT > 0f){
+		if ((mHairLength - HAIR_CUT_LENGTH) >= MIN_HAIR_LENGHT) {
 			mHairLength -= HAIR_CUT_LENGTH;
-			}
 		}
+	}
 
 }
